@@ -40,14 +40,17 @@ mesiac_opak(650,-180,20,20,"red","light blue")
 
 #uloha 6
 
+def lod (x,y,s,v):
+    canvas.create_polygon (x,y,x+(800-s)/8,y+2*v/11,x+3*(800-s)/8,y+2*v/11,x+4*(800-s)/8,y, fill="brown", outline="black")
+    canvas.create_rectangle (x+9*(800-s)/40,y,x+11*(800-s)/40,y-4*v/11, fill="brown")
+    canvas.create_polygon (x+11*(800-s)/40,y-2*v/11,x+3*(800-s)/8,y-16*v/55,x+11*(800-s)/40,y-4*v/11, fill="blue", outline="black")
+    mesiac_opak(x+11*(800-s)/80,y-275,v/22,v/22,"brown","white")
+    mesiac(x+5*(800-s)/16,y-275,v/22,v/22,"white","brown")
 
-def lod (x,y):
-    canvas.create_polygon (x,y,x+(800-x)/8,y+2*y/11,x+3*(800-x)/8,y+2*y/11,x+4*(800-x)/8,y, fill="brown", outline="black")
-    canvas.create_rectangle (x+9*(800-x)/40,y,x+11*(800-x)/40,y-4*y/11, fill="brown")
-    canvas.create_polygon (x+11*(800-x)/40,y-2*y/11,x+3*(800-x)/8,y-16*y/55,x+11*(800-x)/40,y-4*y/11, fill="blue", outline="black")
-    mesiac_opak(x+11*(800-x)/80,y-275,y/22,y/22,"brown","white")
-    mesiac(x+5*(800-x)/16,y-275,y/22,y/22,"white","brown")
+a=random.randint(350,450)
+b=random.randint(250,350)
+for _ in range (3):
+    lod(a,b,a,b)
+    a-=75
+    b+=100
 
-lod(550,275)
-lod(450,375)
-lod(300,450)
