@@ -9,15 +9,15 @@ def strom (x,y,r):
 
 
 def trava (x,y,s,v):
-    for i in range (3,10):
+    for _ in range (3,10):
         canvas.create_line(x,y,s,v, fill="green", width=random.randint(1,2))       
         v-=random.randrange(3,7)
         s+=random.randrange(3,10)
-for j in range (5,15):
+for _ in range (20):
     x=random.randrange(1,800)
     y=random.randrange(1,600)
     trava (x,y,x+random.randrange(-25,25),y-random.randrange(0,5))
-for k in range (5,15):
+for _ in range (10):
     x=random.randrange(1,800)
     y=random.randrange(1,600)
     strom (x,y,random.randint(10,50))
