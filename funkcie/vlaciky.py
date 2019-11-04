@@ -5,7 +5,7 @@ canvas = tkinter.Canvas(width=X_MAX, height=Y_MAX)
 canvas.pack()
 
 def farba():
-    r=random.randrage(256)
+    r=random.randrange(256)
     g=random.randrange(256)
     b=random.randrange(256)
     return f"#{r:02x}{g:02x}{b:02x}
