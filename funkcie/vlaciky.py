@@ -8,7 +8,7 @@ def farba():
     r=random.randrange(256)
     g=random.randrange(256)
     b=random.randrange(256)
-    return f"#{r:02x}{g:02x}{b:02x}
+    return f"#{r:02x}{g:02x}{b:02x}"
 
 def vlak():
     for i in range(2,5):
