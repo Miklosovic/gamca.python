@@ -9,5 +9,5 @@ def stvorce(x,y,r,p,s):
         canvas.create_rectangle(x+r,y+r,x-r,y-r)
         r-=s
 
-for _ in range(100):
+for _ in range(10):
     stvorce(random.randint(150,650),random.randint(150,450),random.randint(75,150),random.randint(5,10),random.randint(2,10))
