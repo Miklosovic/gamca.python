@@ -8,23 +8,30 @@ c.pack()
 
 r = 25
 s, v = x_max, y_max
-
-c.create_rectangle (s - 2*r, v - 2*r, s, v, fill="black")
-c.create_rectangle (s - 4*r, v - 2*r, s - 2*r, v, fill="red")
-c.create_rectangle (s - 6*r, v - 2*r, s - 4*r, v, fill="green")
-c.create_rectangle (s - 8*r, v - 2*r, s - 6*r, v, fill="blue")
-
 a, b = 0, y_max - 2*r
+m, n = x_max - 2*r, 0
 
-c.create_rectangle (a, b, a + 2*r, b + 2*r)
-c.create_oval (a+r - r/12, b+r - r/12, a+r + r/12, b+r + r/12, fill="black")
+def vymaz():
 
-c.create_rectangle (a + 2*r, b, a + 4*r, b + 2*r)
-c.create_oval (a+3*r - r/6, b+r - r/6, a+3*r + r/6, b+r + r/6, fill="black")
+    c.create_rectangle (s - 2*r, v - 2*r, s, v, fill="black")
+    c.create_rectangle (s - 4*r, v - 2*r, s - 2*r, v, fill="red")
+    c.create_rectangle (s - 6*r, v - 2*r, s - 4*r, v, fill="green")
+    c.create_rectangle (s - 8*r, v - 2*r, s - 6*r, v, fill="blue")
 
-c.create_rectangle (a + 4*r, b, a + 6*r, b + 2*r)
-c.create_oval (a+5*r - r/3, b+r - r/3, a+5*r + r/3, b+r + r/3, fill="black")
 
+    c.create_rectangle (a, b, a + 2*r, b + 2*r)
+    c.create_oval (a+r - r/12, b+r - r/12, a+r + r/12, b+r + r/12, fill="black")
+
+    c.create_rectangle (a + 2*r, b, a + 4*r, b + 2*r)
+    c.create_oval (a+3*r - r/6, b+r - r/6, a+3*r + r/6, b+r + r/6, fill="black")
+
+    c.create_rectangle (a + 4*r, b, a + 6*r, b + 2*r)
+    c.create_oval (a+5*r - r/3, b+r - r/3, a+5*r + r/3, b+r + r/3, fill="black")
+
+
+    c.create_rectangle (m, n, m + r, n +r)
+
+vymaz()
 
 k = False
 farba = "black"
@@ -53,6 +60,7 @@ def klik(event):
         hrubka = 3
     elif a + 4*r < x_klik < a + 6*r and b < y_klik < y_max:
         hrubka = 5
+
     
 
 def pusti(event):
