@@ -9,16 +9,22 @@ c.pack()
 r = 25
 s, v = x_max, y_max
 
-c.create_rectangle (s - 2*r, v - 2*r, s, v, fill="blue")
+c.create_rectangle (s - 2*r, v - 2*r, s, v, fill="black")
 c.create_rectangle (s - 4*r, v - 2*r, s - 2*r, v, fill="red")
 c.create_rectangle (s - 6*r, v - 2*r, s - 4*r, v, fill="green")
-c.create_rectangle (s - 8*r, v - 2*r, s - 6*r, v, fill="yellow")
+c.create_rectangle (s - 8*r, v - 2*r, s - 6*r, v, fill="blue")
 
 a, b = 0, y_max - 2*r
 
 c.create_rectangle (a, b, a + 2*r, b + 2*r)
-c.create_oval (a, b, a + 2*r, b + 2*r)
-c.create
+c.create_oval (a+r - r/12, b+r - r/12, a+r + r/12, b+r + r/12, fill="black")
+
+c.create_rectangle (a + 2*r, b, a + 4*r, b + 2*r)
+c.create_oval (a+3*r - r/6, b+r - r/6, a+3*r + r/6, b+r + r/6, fill="black")
+
+c.create_rectangle (a + 4*r, b, a + 6*r, b + 2*r)
+c.create_oval (a+5*r - r/3, b+r - r/3, a+5*r + r/3, b+r + r/3, fill="black")
+
 
 k = False
 farba = "black"
@@ -33,14 +39,20 @@ def klik(event):
     k = True
 
     if s > x_klik > s - 2*r and v > y_klik > v - 2*r :
-        farba = "blue"
+        farba = "black"
     elif s - 2*r > x_klik > s - 4*r and v > y_klik > v - 2*r :
         farba = "red"
     elif s - 4*r > x_klik > s - 6*r and v > y_klik > v - 2*r :
         farba = "green"
     elif s - 6*r > x_klik > s - 8*r and v > y_klik > v - 2*r :
-        farba = "yellow"
+        farba = "blue"
 
+    if a < x_klik < a + 2*r and b < y_klik < y_max:
+        hrubka = 1
+    elif a + 2*r < x_klik < a + 4*r and b < y_klik < y_max:
+        hrubka = 3
+    elif a + 4*r < x_klik < a + 6*r and b < y_klik < y_max:
+        hrubka = 5
     
 
 def pusti(event):
