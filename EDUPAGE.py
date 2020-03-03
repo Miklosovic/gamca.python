@@ -294,7 +294,88 @@ from random import randrange, randint
 
 
 ##41
-    
+
+##a)
+
+##n = randint(1,10)
+##print(n)
+##for _ in range (n):
+##    print(n*"*")
+
+##b)
+
+##n = randint(1,10)
+##a = 0
+##print(n)
+##for _ in range (n):
+##    a += 1
+##    print(a*"*")
+
+##c)
+
+##n = randint(1,10)
+##a = n
+##print(n)
+##for _ in range (n):
+##    print(a*"*")
+##    a -= 1
+
+##d)
+
+##n = randint(1,10)
+##print(n)
+##a = 2*n - 1
+##b = 1
+##for _ in range(n):
+##    print(b*" ", a*"*")
+##    a -= 2
+##    b += 1
+
+##e)
+
+##n = randint(1,10)
+##print(n)
+##a = n - 2
+##print(n*"*")
+##for _ in range(n-2):
+##    print("*", a*" ", "*")
+##print(n*"*")
+
+##f)
+
+##n = randint(1,10)
+##print(n)
+##a = n
+##b = 0
+##for _ in range(n):
+##    a -= 1
+##    b += 1
+##    print(a*" ", b*"*")
+
+##g)
+
+##n = randint(1,10)
+##print(n)
+##a = 0
+##for _ in range(n):
+##    a += 1
+##    print(a*"*")
+##for _ in range(n-1):
+##    a -= 1
+##    print(a*"*")
+
+##h)
+
+##n = randint(1,10)
+##print(n)
+##a = 0
+##for _ in range(n):
+##    a += 1
+##    print(a*" ", "*")
+##for _ in range(n-1):
+##    a -= 1
+##    print(a*" ", "*")
+
 ##42
 
 ##x = int(input("x = "))
@@ -325,7 +406,7 @@ from random import randrange, randint
 ##45
 
 ##n = int(input("n =  "))
-##a = n
+##a = int(n**(1/2) + 2)
 ##d = 1
 ##b = 1
 ##while a >= 1:
@@ -341,7 +422,6 @@ from random import randrange, randint
 ##    print(n, "je prvocislo")
 ##else:
 ##    pass
-
 
 
 
